@@ -7,9 +7,8 @@ import FormField from '../../components/FormField'
 import CustomButton from '../../components/CustomButton'
 import { Link } from 'expo-router'
 
-const SignUp = () => {
+const SignIn = () => {
   const [form, setForm] = useState({
-    username:'',
     email: '',
     password: ''
   })
@@ -33,17 +32,11 @@ const SignUp = () => {
             <Image 
             source={images.path}
             resizeMode='contain'
-            className='w-[136px] h-[15px] bottom-[-80px] right-[-85px]'
+            className='w-[136px] h-[15px] bottom-[-80px] right-[-59px]'
             />
 
-            <Text className='text-2xl text-white text-semibold mt-10 font-psemibold'>Sign up to <Text className={`text-secondary-200`}>Aora</Text></Text>
+            <Text className='text-2xl text-white text-semibold mt-10 font-psemibold'>Log into <Text className={`text-secondary-200`}>Aora</Text></Text>
           
-            <FormField 
-              title='Username'
-              value={form.email}
-              handleChangeText={(e) => setForm({...form, username: e})}
-              otherStyles='mt-10'
-            />
             <FormField 
               title='E-mail'
               value={form.email}
@@ -59,16 +52,16 @@ const SignUp = () => {
               otherStyles='mt-7'
             />
             <CustomButton 
-              title='Sign-Up'
+              title='Sign-In'
               handlePress={submit}
               containerStyles={`mt-7`}
               isLoading={isSubmitting}
             />
              <View className={`justify-center flex-row pt-5 gap-2`}>
               <Text className={`text-gray-100 font-pregular`}>
-                Have have an account already?
+                Don't have an account?
               </Text>
-              <Link href={`/sign-in`} className='text-secondary underline font-pregular'>Sign In</Link>
+              <Link href={`/sign-up`} className='text-secondary underline font-pregular'>Sign Up</Link>
              </View>
           </View>
         </ScrollView>
@@ -78,4 +71,4 @@ const SignUp = () => {
   )
 }
 
-export default SignUp
+export default SignIn

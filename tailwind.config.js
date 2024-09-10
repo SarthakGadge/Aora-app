@@ -3,6 +3,9 @@ module.exports = {
   content: ["./app/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      spacing: {
+        '22': '5.5rem', // Customize if needed
+      },
       colors: {
         primary: "#161622",
         secondary: {
